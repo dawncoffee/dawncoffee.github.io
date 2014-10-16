@@ -4,8 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if summary %}{{ post.summary }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ "/assets/fav.png" | prepend: site.basesurl }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ "/assets/icon.png" | prepend: site.basesurl }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="alternate" type="application/rss+xml" href="{{ site.links.feed }}">
+    <link rel="prerender" href="{{ site.links.blog }}">
+
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.basesurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <meta property="og:image" content="{{ "/assets/og.png" | prepend: site.basesurl | prepend: site.url }}" />
+    <meta name="twitter:image" content="{{ "/assets/og.png" | prepend: site.basesurl | prepend: site.url }}" />
+    <meta name="twitter:site" content="@{{ site.links.twitter }}">
+    <meta name="twitter:creator" content="@{% if post.twitter_username %}{{ post.twitter_username }}{% else %}{{ site.links.twitter }}{% endif %}">
+    <meta name="twitter:domain" content="{{ site.links.blog }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+
 </head>

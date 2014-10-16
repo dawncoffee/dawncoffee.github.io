@@ -1,5 +1,19 @@
 title: at Dawncoffee
 email: at@blogs.dawncoffee.com
-url: "https://at.dawncoffee.com"
+url: "https://at.dawncoffee.cl"
+
+global:
+ name: Dawncoffee
+
+links:
+ blog: "http://dawncoffee.com"
+ twitter: "dawncoffeecom"
+ disqus: "atdawncoffeecom"
+ feed: "http://feeds.dawncoffee.com/dawncoffee/at"
 
 markdown: kramdown
+permalink: pretty
+highlighter: pygments
+
+sass:
+  compressed: true

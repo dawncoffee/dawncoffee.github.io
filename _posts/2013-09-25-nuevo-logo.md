@@ -2,6 +2,8 @@
 layout: post
 title:  Un nuevo logo
 date:   2013-09-25 14:12:53
+summary: Hoy el logo de Dawncoffee ha recibido su primera actualización.
+twitter_username: ignaces
 ---
 
 Hoy el logo de Dawncoffee ha recibido su primera actualización.

@@ -2,8 +2,6 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -21,6 +19,11 @@
     &:visited {
         color: $grey-color-dark;
     }
+}
+
+.site-logo {
+    margin: 20px 0;
+    width: 287px;
 }
 
 .site-nav {
@@ -91,70 +94,23 @@
 /**
  * Site footer
  */
+
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
 }
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+.footer-image {
+    width:50px;
+    margin-bottom:5px;
+}
+.footer-text {
+    font-size:11px;
+    display:block;
+    color:rgb(150,150,150);
 }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
 
 
 
@@ -181,11 +137,14 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    font-style: italic;
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 32px;
+    font-family: $brand-font-family;
+    font-style: italic;
 }
 
 
@@ -193,14 +152,17 @@
 /**
  * Posts
  */
+
 .post-header {
     margin-bottom: $spacing-unit;
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 32px;
     letter-spacing: -1px;
     line-height: 1;
+    font-style: italic;
+    font-family: $brand-font-family;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -233,4 +195,7 @@
             font-size: 18px;
         }
     }
+}
+.post-comments {
+    margin-top:90px
 }
