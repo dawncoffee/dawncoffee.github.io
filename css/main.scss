@@ -3,10 +3,23 @@
 ---
 @charset "utf-8";
 
+@mixin font-face($style-name, $file, $style, $weight) {
+	$filepath: "fonts/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url("#{$filepath}" format("woff"));
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+
+@include font-face("Georgia Pro Cond Light", "17d15e27-baf1-4431-a7d2-a73c7e2e649c", "normal", "normal");
+@include font-face("Georgia Pro Cond Light", "17b1d595-e535-4042-8ef5-fb5273c9440a", "italic", "normal");
 
 // Our variables
-$base-font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-$brand-font-family: "Book Antiqua", "Palatino Linotype", Palatino, Constantia, $base-font-family;
+$base-font-family: "Georgia Pro Cond Light", georgia, serif;
+$brand-font-family: $base-font-family;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
