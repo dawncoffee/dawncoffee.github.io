@@ -3,22 +3,10 @@
 ---
 @charset "utf-8";
 
-@mixin font-face($style-name, $file, $style, $weight) {
-	$filepath: "fonts/" + $file;
-    @font-face {
-        font-family: "#{$style-name}";
-        src: url("#{$filepath}" format("woff"));
-        font-style: $style;
-        font-weight: $weight;
-    }
-}
-
-
-@include font-face("Georgia Pro Cond Light", "17d15e27-baf1-4431-a7d2-a73c7e2e649c", "normal", "normal");
-@include font-face("Georgia Pro Cond Light", "17b1d595-e535-4042-8ef5-fb5273c9440a", "italic", "normal");
 
 // Our variables
-$base-font-family: "Georgia Pro Cond Light", georgia, serif;
+$base-font: "Georgia Pro Cond Light";
+$base-font-family: $base-font, Georgia, serif;
 $brand-font-family: $base-font-family;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -37,6 +25,20 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
+
+@mixin font-face($style-name, $url, $style, $weight) {
+    $filepath: "fonts/" + $url;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: local("#{$style-name}"), 
+        url("#{$filepath}") format("woff");
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+@include font-face($base-font, "17d15e27-baf1-4431-a7d2-a73c7e2e649c", "normal", "normal");
+@include font-face($base-font, "17b1d595-e535-4042-8ef5-fb5273c9440a", "italic", "normal");
 
 
 // Using media queries with like this:
