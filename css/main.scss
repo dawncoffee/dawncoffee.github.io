@@ -7,23 +7,24 @@
 // Our variables
 $base-font: "Georgia Pro Cond Light";
 $base-font-family: $base-font, Georgia, serif;
-$brand-font-family: $base-font-family;
-$base-font-size:   16px;
+
+$alt-font: "Georgia Pro Light";
+$alt-font-family: $alt-font, $base-font, Georgia, serif;
+
+$base-font-size:   1em;
+
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.7;
 
 $spacing-unit:     40px;
 
-$text-color:       #111;
-$background-color: #fffff;
+$text-color:       rgb(0,0,0);
+$background-color: rgba(255,255,255,0);
 $brand-color:      rgb(60,60,60);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-
-$on-palm:          600px;
-$on-laptop:        800px;
 
 
 @mixin font-face($style-name, $url, $style, $weight) {
@@ -37,28 +38,14 @@ $on-laptop:        800px;
     }
 }
 
+@include font-face($alt-font, "6fea8d96-8b13-451e-9fff-12c56705d170", "normal", "normal");
+@include font-face($alt-font, "04c6125a-88f1-4c18-b522-a1d0303af279", "italic", "normal");
+
 @include font-face($base-font, "17d15e27-baf1-4431-a7d2-a73c7e2e649c", "normal", "normal");
 @include font-face($base-font, "17b1d595-e535-4042-8ef5-fb5273c9440a", "italic", "normal");
 
 
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+        "layout"
 ;

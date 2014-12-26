@@ -13,7 +13,9 @@
     <link rel="alternate" type="application/rss+xml" href="{{ site.links.feed }}">
     <link rel="prerender" href="{{ site.links.blog }}">
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.basesurl }}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/normalize.min.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.basesurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <meta property="og:image" content="{{ "/assets/og.png" | prepend: site.basesurl | prepend: site.url }}" />
