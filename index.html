@@ -4,17 +4,17 @@ layout: default
 <div class="row">
 	<div class="large-12 column">
 
-			<div class="post-list">
-				{% for post in site.posts %}
-				<article>
-					<h2>
-						<a class="post-link" href="{% if post.ext_url %}{{ post.ext_url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{% if post.ext_url %}{{ post.title }} »{% else %}{{ post.title }}{% endif %}</a>
-					</h2>
-					<p class="post-summary">{{ post.summary }}</p>
-					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-				</article>
-				{% endfor %}
-			</ul>
+		<section class="post-list">
+			{% for post in site.posts %}
+			<article>
+				<h2>
+					<a class="post-link" href="{% if post.ext_url %}{{ post.ext_url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{% if post.ext_url %}{{ post.title }} »{% else %}{{ post.title }}{% endif %}</a>
+				</h2>
+				<p class="post-summary">{{ post.summary }}</p>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+			</article>
+			{% endfor %}
+		</section>
 
 	</div>
 

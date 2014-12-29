@@ -3,12 +3,14 @@
 ---
 @charset "utf-8";
 
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Neuton:300);
 
 // Our variables
-$base-font: "Georgia Pro Cond Light";
-$base-font-family: $base-font, Georgia, serif;
+$base-font: "Neuton";
+$base-font-family: $base-font, serif;
 
-$alt-font: "Georgia Pro Light";
+$alt-font: "Lora";
 $alt-font-family: $alt-font, $base-font, Georgia, serif;
 
 $base-font-size:   1em;
@@ -26,23 +28,6 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-
-@mixin font-face($style-name, $url, $style, $weight) {
-    $filepath: "fonts/" + $url;
-    @font-face {
-        font-family: "#{$style-name}";
-        src: local("#{$style-name}"), 
-        url("#{$filepath}") format("woff");
-        font-style: $style;
-        font-weight: $weight;
-    }
-}
-
-@include font-face($alt-font, "6fea8d96-8b13-451e-9fff-12c56705d170", "normal", "normal");
-@include font-face($alt-font, "04c6125a-88f1-4c18-b522-a1d0303af279", "italic", "normal");
-
-@include font-face($base-font, "17d15e27-baf1-4431-a7d2-a73c7e2e649c", "normal", "normal");
-@include font-face($base-font, "17b1d595-e535-4042-8ef5-fb5273c9440a", "italic", "normal");
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
