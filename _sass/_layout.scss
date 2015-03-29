@@ -4,7 +4,7 @@ h2,
 h3,
 h4,
 h5,
-h6, 
+h6,
 body {
     font-family: $alt-font-family;
     font-weight: 300;
@@ -57,8 +57,6 @@ body {
 }
 
 
-
-
 /**
  * Page content
  */
@@ -84,25 +82,30 @@ body {
     font-style: italic;
 }
 
-.post-link {
+.post-link,
+.post-title {
     font-family: $base-font-family;
-    font-style: normal;
     display: block;
     font-size: 36px;
     color: black;
     letter-spacing: -1px;
     font-weight: 100;
+    font-style: italic;
+}
+
+@mixin postcontent {
+  font-family: $alt-font-family;
+  font-size: 1.1em;
+  font-style: normal;
+  line-height: $base-line-height;
+  font-weight: 300;
+  @media only screen and (max-width: 767px) {
+    font-size: 1em;
+  }
 }
 
 .post-summary {
-    font-family: $alt-font-family;
-    font-style: normal;
-    font-size: 1.2em;
-    @media only screen and (max-width: 767px) {
-        font-size: 1em;
-    }
-    line-height: $base-line-height;
-    font-weight: 300;
+  @include postcontent;
 }
 
 
@@ -118,29 +121,13 @@ body {
     }
 }
 
-
 .post-header {
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
-    font-family: $base-font-family;
-    font-size: 36px;
-    letter-spacing: -1px;
-    line-height: 1;
-    font-style: normal;
-    font-weight: 100;
-
-
-}
-
 .post-content {
     margin-bottom: $spacing-unit;
-
     p {
-        font-size: 1em;
-        font-style: normal;
-        line-height: $base-line-height;
-        font-weight: 300;
+      @include postcontent;
     }
 }

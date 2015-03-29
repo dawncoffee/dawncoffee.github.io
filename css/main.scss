@@ -4,16 +4,16 @@
 @charset "utf-8";
 
 // Our variables
-$base-font: "proxima-nova";
-$base-font-family: $base-font, serif;
+$base-font: "Merriweather";
+$base-font-family: $base-font, Georgia, serif;
 
-$alt-font: "proxima-nova";
+$alt-font: "Merriweather";
 $alt-font-family: $alt-font, $base-font, Georgia, serif;
 
 $base-font-size:   1em;
 
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.7;
+$base-line-height: 1.7em;
 
 $spacing-unit:     40px;
 
@@ -27,6 +27,5 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "fonts",
         "layout"
 ;
