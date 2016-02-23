@@ -15,7 +15,8 @@ links:
  
 markdown: kramdown
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
+future: true
 
 sass:
   style: compressed
